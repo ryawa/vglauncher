@@ -113,9 +113,11 @@ jobs:
           qt-version: ${{ matrix.qt-version }}
 
       - name: Configure
+        shell: bash
         run: cmake --preset "$CMAKE_PRESET"
 
       - name: Build
+        shell: bash
         run: cmake --build --preset "$CMAKE_PRESET" --config "$BUILD_TYPE"
 
       - name: Get version
