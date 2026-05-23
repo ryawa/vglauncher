@@ -95,6 +95,8 @@ jobs:
       BUILD_TYPE: Release
       CMAKE_PRESET: ${{ matrix.cmake-preset }}
       MACOSX_DEPLOYMENT_TARGET: ${{ matrix.macosx-deployment-target }}
+      ARTIFACT_NAME: ${{ matrix.artifact-name }}
+      BUILD_PLATFORM: vglauncher
 
     steps:
       - name: Download patched source
